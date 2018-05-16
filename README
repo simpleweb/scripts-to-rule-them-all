@@ -1,5 +1,7 @@
 # Simpleweb's Rails/Docker-Compose/SemaphoreCI/Heroku Scripts To Rule Them All
 
+[![Build Status](https://travis-ci.org/simpleweb/scripts-to-rule-them-all.svg?branch=master)](https://travis-ci.org/simpleweb/scripts-to-rule-them-all)
+
 These scripts (and this README) are shamelessly ripped off from Github's [scripts-to-rule-them-all](https://github.com/github/scripts-to-rule-them-all)
 and updated based on some extra ideas from a [Mark Phelps' blog post](https://www.markphelps.me/2016/02/01/scripts-to-rule-them-all/).
 They are designed for use with a Rails app developed locally using docker-compose and then deployed to Heroku via a CI/CD service like SemaphoreCI.

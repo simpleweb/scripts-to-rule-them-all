@@ -3,8 +3,6 @@ addons:
   apt:
     sources:
     - debian-sid
-    packages:
-    - shellcheck
 script:
   - shellcheck script/*
 sudo: false

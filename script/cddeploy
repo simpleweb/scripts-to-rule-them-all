@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # script/cddeploy: Deploy the app through Continue Deployment pipeline
 

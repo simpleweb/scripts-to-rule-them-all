@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# script/cleanup: Delete any unnecessary or temporary files.
+
+set -eu
+
+cd "$(dirname "$0")/.."
+
+docker-compose run --rm web bin/rails log:clear tmp:clear &> /dev/null
+
+docker-compose stop &> /dev/null || true &> /dev/null
+docker-compose rm --force &> /dev/null || true &> /dev/null
+docker stop `docker ps -a -q -f status=exited` &> /dev/null || true &> /dev/null
+docker rm -v `docker ps -a -q -f status=exited` &> /dev/null || true &> /dev/null
+docker rmi `docker images --filter 'dangling=true' -q --no-trunc` &> /dev/null || true &> /dev/null

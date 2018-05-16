@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# script/cddeploy: Deploy the app through Continue Deployment pipeline
+
+set -eu
+
+cd "$(dirname "$0")/.."
+
+echo "==> Deploying to Heroku…"
+git push --force heroku $BRANCH_NAME:master

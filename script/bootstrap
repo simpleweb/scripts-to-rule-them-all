@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# script/bootstrap: Resolve all dependencies that the application requires to
+#                   run.
+
+set -eu
+
+cd "$(dirname "$0")/.."
+
+if [[ ! -f ".env" ]]; then
+  echo "ERROR: Create a .env file (see .env.example for inspiration)" >&2
+  exit 1
+fi
+
+echo "==> Updating gems…"
+bundle check || bundle install --quiet
+
+echo "==> Build docker images…"
+docker-compose build > /dev/null

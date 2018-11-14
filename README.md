@@ -123,6 +123,11 @@ This script is typically only called from your CD server.
 [`script/cleanup`][cleanup] is used to cleanup any cruft that builds up during development.
 This can range from log files to dangling Docker containers and images.
 
+### script/docker
+
+The scripts in [`script/docker`][script/docker] are designed to be run by the top-level scripts inside a docker container.
+This is mainly to achieve speed up so don't have to fire up a new container for each command.
+
 [bootstrap]: script/bootstrap
 [setup]: script/setup
 [update]: script/update

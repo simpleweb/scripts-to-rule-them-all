@@ -6,7 +6,7 @@ set -eu
 
 cd "$(dirname "$0")/.."
 
-docker-compose run --rm web bin/rails log:clear tmp:clear &> /dev/null
+docker-compose run --rm web script/docker/cleanup
 
 docker-compose stop &> /dev/null || true &> /dev/null
 docker-compose rm --force &> /dev/null || true &> /dev/null

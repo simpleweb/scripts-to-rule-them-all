@@ -4,5 +4,5 @@ addons:
     sources:
     - debian-sid
 script:
-  - shellcheck script/*
+  - for file in $(find script -type f); do shellcheck --format=tty --shell=bash $file; done;
 sudo: false

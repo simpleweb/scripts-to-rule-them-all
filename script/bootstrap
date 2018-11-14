@@ -12,8 +12,5 @@ if [[ ! -f ".env" ]]; then
   exit 1
 fi
 
-echo "==> Updating gems…"
-bundle check || bundle install --quiet
-
 echo "==> Build docker images…"
 docker-compose build > /dev/null

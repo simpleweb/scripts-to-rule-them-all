@@ -9,5 +9,5 @@ cd "$(dirname "$0")/.."
 script/bootstrap
 
 echo "==> Updating db…"
-# run all database migrations to ensure everything is up to date.
-docker-compose run --rm web bin/rails db:migrate
+# run update script inside a container
+docker-compose run --rm web script/docker/update

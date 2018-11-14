@@ -91,7 +91,6 @@ to always ensure that the application is up to date.
 **TODO**: If called from
 [`script/cibuild`][cibuild], it should probably reset the application to a clean state.
 
-
 ### script/cibuild
 
 [`script/cibuild`][cibuild] is used for your continuous integration server.
@@ -114,9 +113,8 @@ the requested environment.
 
 ### script/cddeploy
 
-[`script/cibuild`][cddeploy] is used for your continuous deployment pipeline.
+[`script/cddeploy`][cddeploy] is used for your continuous deployment pipeline.
 This script is typically only called from your CD server.
-
 
 ### script/cleanup
 
